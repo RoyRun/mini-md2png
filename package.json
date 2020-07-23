@@ -8,8 +8,18 @@
     "lib",
     "bin"
   ],
+  "bin": {
+    "mini-md2png": "bin/md2png.js"
+  },
   "main": "index.js",
   "keywords": [],
+  "dependencies": {
+    "commander": "^6.0.0",
+    "gray-matter": "^4.0.2",
+    "marked": "^1.1.0",
+    "puppeteer": "^4.0.0",
+    "replace-ext": "^2.0.0"
+  },
   "devDependencies": {
     "eslint": "^6.6.0",
     "prettier": "^1.19.1",
@@ -24,8 +34,9 @@
     "npm": ">= 4.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1 && jest",
-    "pretest": "eslint ."
+    "pretest": "eslint .",
+    "test": "node ./bin/md2png.js README.md",
+    "publish": "npm publish --registry https://registry.npmjs.org"
   },
   "license": "ISC",
   "lint-staged": {
