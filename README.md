@@ -60,11 +60,11 @@ Options:
   -h, --help             display help for command
 
 Example:
-  $ m2i example.md -o output.png -w 800
+  $ mini-md2png example.md -o output.png -w 800
 ```
 
 or use npx
 
 ```shell
-$ npx m2i example.md -o output.png -w 800
+$ npx mini-md2png example.md -o output.png -w 800
 ```
