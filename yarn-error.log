@@ -1,0 +1,112 @@
+Arguments: 
+  /Users/roy/.nvm/versions/node/v10.13.0/bin/node /Users/roy/.nvm/versions/node/v10.13.0/bin/yarn publish
+
+PATH: 
+  /Users/roy/.nvm/versions/node/v10.13.0/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin:/usr/local/mysql/bin:/Users/roy/Library/Android/sdk/tools:/Users/roy/Library/Android/sdk/tools/bin:/Users/roy/Library/Android/sdk/platform-tools:/Users/roy/Library/Android/sdk/emulator:/Users/roy/.nvm/versions/node/v9.11.1/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  10.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/-/user/org.couchdb.user:roy: [conflict] User roy already exists
+      at Request.params.callback [as _callback] (/Users/roy/.nvm/versions/node/v10.13.0/lib/node_modules/yarn/lib/cli.js:66926:18)
+      at Request.self.callback (/Users/roy/.nvm/versions/node/v10.13.0/lib/node_modules/yarn/lib/cli.js:140564:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/Users/roy/.nvm/versions/node/v10.13.0/lib/node_modules/yarn/lib/cli.js:141536:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/Users/roy/.nvm/versions/node/v10.13.0/lib/node_modules/yarn/lib/cli.js:141458:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1094:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "mini-md2png",
+    "version": "1.0.3",
+    "description": "",
+    "homepage": "",
+    "author": "",
+    "files": [
+      "lib",
+      "bin"
+    ],
+    "bin": {
+      "mini-md2png": "bin/md2png.js"
+    },
+    "main": "index.js",
+    "keywords": [],
+    "dependencies": {
+      "commander": "^6.0.0",
+      "gray-matter": "^4.0.2",
+      "marked": "^1.1.0",
+      "puppeteer": "^4.0.0",
+      "replace-ext": "^2.0.0"
+    },
+    "devDependencies": {
+      "eslint": "^6.6.0",
+      "prettier": "^1.19.1",
+      "husky": "^3.0.9",
+      "lint-staged": "^9.4.3",
+      "eslint-config-prettier": "^6.6.0",
+      "eslint-plugin-prettier": "^3.1.1",
+      "eslint-config-xo": "^0.27.2",
+      "jest": "^26.1.0"
+    },
+    "engines": {
+      "npm": ">= 4.0.0"
+    },
+    "scripts": {
+      "pretest": "eslint .",
+      "test": "node ./bin/md2png.js README.md",
+      "publish": "npm publish --registry https://registry.npmjs.org"
+    },
+    "license": "ISC",
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ],
+      "*.json": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "eslintConfig": {
+      "extends": [
+        "xo",
+        "prettier"
+      ],
+      "env": {
+        "jest": true,
+        "node": true
+      },
+      "rules": {
+        "prettier/prettier": "error"
+      },
+      "plugins": [
+        "prettier"
+      ]
+    },
+    "repository": "git@github.com:RoyRun/mini-md2png.git",
+    "jest": {
+      "testEnvironment": "node"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

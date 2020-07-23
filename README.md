@@ -43,7 +43,7 @@ await m2png('./bar.md', options)
 ## CLI Usage
 
 ```shell
-$ npm install mini-md2png -g
+$ PUPPETEER_DOWNLOAD_HOST=https://npm.taobao.org/mirrors npm i -g mini-md2png
 
 # or yarn 
 $ yarn global add mini-md2png
